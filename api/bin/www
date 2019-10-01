@@ -22,7 +22,7 @@ let mongoUri = 'mongodb://localhost/awesome-app';
 console.log(process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'production') {
-  mongoUri = 'mongodb://tora:Nguyendinhtin2701@ds133162.mlab.com:33162/awesome-app';
+  mongoUri = process.env.MONGOLAB_URI;
 }
 mongoose
   .connect(mongoUri, { useNewUrlParser: true })
