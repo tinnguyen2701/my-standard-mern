@@ -8,9 +8,16 @@ const apiRouter = require('./routes/apiRouter');
 
 const app = express();
 
+// console.log(process.env.NODE_ENV);
+
+// if (process.env.NODE_ENV === 'production') {
+//   MONGOLAB_URL = process.env.MONGOLAB_URI;
+// }
+
 app.use(cors());
 
 app.use(logger('dev'));
+
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: false }));
