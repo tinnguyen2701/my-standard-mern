@@ -7,7 +7,6 @@ const App = ({ data }) => {
   useEffect(() => {
     store.dispatch({ type: FETCH_DATA_REQUEST });
   }, []);
-  console.log(data);
 
   return data && <div>chi cha ddc {data.success ? 'goi success' : ' goi false'}</div>;
 };

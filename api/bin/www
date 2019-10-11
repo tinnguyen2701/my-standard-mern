@@ -19,11 +19,12 @@ app.set('port', port);
 
 let mongoUri = 'mongodb://localhost/awesome-app';
 
-console.log(process.env.MONGOLAB_URI, process.env.NODE_ENV);
+// console.log(process.env.MONGOLAB_URI, process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'production') {
   mongoUri = process.env.MONGOLAB_URI;
 }
+
 mongoose
   .connect(mongoUri, { useNewUrlParser: true })
   .then(() => console.log('connected db'))
